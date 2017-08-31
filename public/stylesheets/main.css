@@ -1,0 +1,30 @@
+#container{
+	overflow: hidden;
+	margin: 50px auto 0;
+	background: #f7f7f7;
+	width: 360px;
+	box-shadow: 0 0 3px rgba(0,0,0,0.1);
+}
+.contacts:nth-child(2n){
+	background-color: white;
+}
+
+.delete-form{
+    display: inline;
+    
+}
+
+.centered{
+    text-align: center;
+}
+
+.well{
+	margin-bottom: 0;
+}
+
+.btn-xs{
+	font-size: 10px;
+	float: right;
+	margin-left: 10px;
+}
+ 

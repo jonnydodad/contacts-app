@@ -1,0 +1,34 @@
+<% include ./partials/header %>
+<div id="container" class="container">
+    <div class="row">
+       <div class="well ">
+           
+         <div class=" ">
+            <a class="btn btn-success" href="/directorys/<%= directory._id %>/contacts/new">add contact</a>
+         </div>
+                <hr>
+                <% directory.contacts.forEach(function(contact){ %>
+                    <div class="row contacts">
+                        <div class="col-md-12">
+                            
+                            <p>
+                                    <form class="delete-form" action="/directorys/<%= directory._id%>/contacts/<%=contact._id%>?_method=DELETE" method=POST>
+                                       <input type="submit" class="btn btn-xs btn-danger" value=delete>
+                                    </form>
+                                    <a class="btn btn-xs btn-warning"
+                                      href="/directorys/<%= directory._id%>/contacts/<%=contact._id%>/edit">edit
+                                    </a>
+        
+                                <p class="pull-right"><%= contact.number %> </p>
+                                <strong><%= contact.name %></strong>
+                                
+                            </p>
+                        </div>
+                    </div>
+                <% }) %>
+            </div>
+        
+    </div>
+</div>
+
+<% include ./partials/footer %>
