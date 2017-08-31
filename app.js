@@ -15,7 +15,8 @@ var express    = require("express"),
 var contactRoutes = require("./routes/contacts"),
     indexRoute = require("./routes/index");
 
-mongoose.connect(process.env.DATABASEURL);
+var url = process.env.DATABASEURL || "mongodb://localhost/contacts_v3";
+mongoose.connect(url);
 //mongoose.connect("mongodb://jonkcoe:Morris420!@ds163053.mlab.com:63053/contacts_app");
 
 
