@@ -10,13 +10,14 @@ var express    = require("express"),
     Contact   = require("./models/contact"),
     User      = require("./models/user");
     
-  
+
   //require routes  
 var contactRoutes = require("./routes/contacts"),
-   
     indexRoute = require("./routes/index");
 
-mongoose.connect("mongodb://localhost/contacts_v3");
+//mongoose.connect("mongodb://localhost/contacts_v3");
+mongoose.connect("mongodb://jonkcoe:Morris420!@ds163053.mlab.com:63053/contacts_app");
+
 app.use(bodyParcer.urlencoded({extended:true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
